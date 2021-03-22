@@ -27,7 +27,7 @@ services:
             - OADB_SERVICE=${OADB_SERVICE}
             - ZIPKIN=http://zipkin:9411/api/v1/spans
         ports:
-            - "8080:80"
+            - "8081:80"
 
     zipkin:
         image: openzipkin/zipkin 

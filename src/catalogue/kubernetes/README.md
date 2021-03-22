@@ -83,7 +83,7 @@ kind: ClusterServiceBroker
 metadata:
   name: oci-service-broker
 spec:
-  url: http://oci-service-broker.mushop-dev:8080
+  url: http://oci-service-broker.mushop-dev:8081
 EOF
 ```
 

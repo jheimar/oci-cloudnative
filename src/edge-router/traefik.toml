@@ -5,7 +5,7 @@ address = ":8888"
 
 [entryPoints]
   [entryPoints.http]
-    address = ":8080"
+    address = ":8081"
 
 [ping]
 entryPoint = "http"
@@ -23,7 +23,7 @@ entryPoint = "http"
       [backends.web1.loadbalancer]
         method = "wrr"
       [backends.web1.servers.server1]
-        url = "http://storefront:8080"
+        url = "http://storefront:8081"
     # media
     [backends.assets1]
       [backends.assets1.loadbalancer]

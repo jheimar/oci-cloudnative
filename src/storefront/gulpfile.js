@@ -155,7 +155,7 @@ gulp.task('rev:replace', gulp.series('rev', function() {
 
 gulp.task('server', function() {
   // READ the API_PROXY environment variable for the shop services
-  const { API_PROXY = 'http://localhost:8080' } = process.env;
+  const { API_PROXY = 'http://localhost:8081' } = process.env;
   sync.init({
     notify: false,
     open: false,

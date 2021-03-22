@@ -43,7 +43,7 @@ The events service requires several environment configurations in order to produ
 
 ```shell
 go run cmd/main.go
-ts=2020-02-18T21:20:46.333405Z caller=main.go:88 transport=HTTP port=8080
+ts=2020-02-18T21:20:46.333405Z caller=main.go:88 transport=HTTP port=8081
 ```
 
 ### Using Docker Compose
@@ -52,14 +52,14 @@ ts=2020-02-18T21:20:46.333405Z caller=main.go:88 transport=HTTP port=8080
 docker-compose up
 ```
 
-Access the service via http://localhost:8080
+Access the service via http://localhost:8081
 
 ## Check
 
 Test the health of the service by doing a GET request to the `/health` endpoint:
 
 ```shell
-curl http://localhost:8080/health
+curl http://localhost:8081/health
 # {"health":[{"service":"events","status":"OK","time":"2020-02-16 12:22:04.716316395 +0000 UTC"}]}
 ```
 
@@ -68,5 +68,5 @@ curl http://localhost:8080/health
 You can produce events by POSTing to the `/events` endpoint:
 
 ```shell
-curl -H "Content-Type: application/json" -X POST -d'{"source":"test","track":"abc123","events":[{"type":"any"}]}' http://localhost:8080/events
+curl -H "Content-Type: application/json" -X POST -d'{"source":"test","track":"abc123","events":[{"type":"any"}]}' http://localhost:8081/events
 ```

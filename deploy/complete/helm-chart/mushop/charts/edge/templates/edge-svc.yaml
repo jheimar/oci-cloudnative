@@ -12,4 +12,4 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       name: http
-      targetPort: 8080
+      targetPort: 8081

@@ -68,7 +68,7 @@ how to access the Jenkins application.
   {{ end -}}
   Setup a port forward for the service.
 
-  kubectl port-forward -n {{ .Release.Namespace }} svc/{{ .Release.Name }}-jenkins 3001:8080
+  kubectl port-forward -n {{ .Release.Namespace }} svc/{{ .Release.Name }}-jenkins 3001:8081
 
 - Open http://localhost:3001/jenkins
 

@@ -5,7 +5,7 @@ address = ":8888"
 
 [entryPoints]
   [entryPoints.http]
-    address = ":8080"
+    address = ":8081"
 
 [ping]
 entryPoint = "http"

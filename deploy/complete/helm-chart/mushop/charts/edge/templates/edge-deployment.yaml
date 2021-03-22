@@ -29,7 +29,7 @@ spec:
           - --configfile=/config/traefik.toml
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8081
           volumeMounts:
             - mountPath: /config
               name: config

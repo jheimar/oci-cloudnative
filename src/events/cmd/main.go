@@ -28,7 +28,7 @@ const (
 
 func main() {
 	var (
-		port = flag.String("port", "8080", "Port to bind HTTP listener")
+		port = flag.String("port", "8081", "Port to bind HTTP listener")
 		zipk = flag.String("zipkin", os.Getenv("ZIPKIN"), "Zipkin address")
 	)
 	flag.Parse()

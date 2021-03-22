@@ -27,12 +27,12 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/app"]
           args:
-          - -port=8080
+          - -port=8081
           env:
             {{- include "events.env.stream" . | nindent 12 }}
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8081
           livenessProbe:
             periodSeconds: 120
             httpGet:

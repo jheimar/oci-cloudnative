@@ -10,7 +10,7 @@ global:
     objectstoragenamespace: 
     # Service broker name (used in the service URL)
     name: oci-broker
-    port: 8080
+    port: 8081
     compartmentId:
     # Service instance name
     instanceName: mushop

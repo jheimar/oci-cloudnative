@@ -28,7 +28,7 @@ The result is a binary named `catalogue`, in the current directory.
 #### Docker
 `docker-compose build`
 
-### To run the service on port 8080
+### To run the service on port 8081
 
 #### Go native
 
@@ -44,10 +44,10 @@ Note: When doing development and running local, you need to set the variables to
 `docker-compose up`
 
 ### Check whether the service is alive
-`curl http://localhost:8080/health`
+`curl http://localhost:8081/health`
 
 ### Use the service endpoints
-`curl http://localhost:8080/catalogue`
+`curl http://localhost:8081/catalogue`
 
 ## Test Zipkin
 

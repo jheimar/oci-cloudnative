@@ -45,7 +45,7 @@ server: kill-server
 		-e MOCK_MODE=$(MOCK_MODE) \
 		-e NODE_ENV=development \
 		-e PORT=3000            \
-		-p 8080:3000            \
+		-p 8081:3000            \
 		-p 9229:9229            \
 		--network mutest_default  \
 		$(IMAGE) supper --inspect -i node_modules server.js
@@ -63,7 +63,7 @@ mock: kill-server
 		-e MOCK_MODE=all \
 		-e NODE_ENV=development \
 		-e PORT=3000            \
-		-p 8080:3000            \
+		-p 8081:3000            \
 		-p 9229:9229            \
 		$(IMAGE) supper --inspect -i node_modules server.js
 

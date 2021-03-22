@@ -80,7 +80,7 @@ First, provision an [Autonomous Database instance](https://www.oracle.com/cloud/
 
 ```bash
 export TNS_ADMIN=/path/to/wallet
-java -Dserver.port=8080 \
+java -Dserver.port=8081 \
      -DOADB_SERVICE=mushop_high \
      -DOADB_USER=CARTS_USER \
      -DOADB_PW=MyPassword \
@@ -96,7 +96,7 @@ You should be able to access the service with a REST client.  For example:
 ```bash
 curl -i -X POST -H "Content-Type: application/json" \
   --data '{"customerId" : 123, "items" : [{"itemId":"MU-US-005","quantity":1,"unitPrice":9.5}]}' \
-  http://localhost:8080/carts/cart2
+  http://localhost:8081/carts/cart2
 ```
 ## Docker
 
@@ -115,7 +115,7 @@ docker run -it \
    --env OADB_PW=MyPassword \
    --env TNS_ADMIN=/wallet \
    --volume /local/path/to/wallet:/wallet \
-   -p 8080:80 \
+   -p 8081:80 \
    mushop/carts
 ```
 
@@ -123,5 +123,5 @@ You should be able to access the service with a REST client.  For example:
 ```bash
 curl -i -X POST -H "Content-Type: application/json" \
   --data '{"customerId" : 123, "items" : [{"itemId":"MU-US-005","quantity":1,"unitPrice":9.5}]}' \
-  http://localhost:8080/carts/cart2
+  http://localhost:8081/carts/cart2
 ```

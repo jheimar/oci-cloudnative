@@ -336,7 +336,7 @@ data:
   
     [entryPoints]
       [entryPoints.http]
-        address = ":8080"
+        address = ":8081"
   
     [ping]
     entryPoint = "http"
@@ -504,7 +504,7 @@ spec:
   ports:
     - port: 80
       name: http
-      targetPort: 8080
+      targetPort: 8081
 ---
 # Source: mushop/charts/fulfillment/templates/fulfillment-svc.yaml
 apiVersion: v1
@@ -640,7 +640,7 @@ spec:
   ports:
     - port: 80
       name: http
-      targetPort: 8080
+      targetPort: 8081
 ---
 # Source: mushop/charts/user/templates/user-svc.yaml
 apiVersion: v1
@@ -1030,7 +1030,7 @@ spec:
           - --configfile=/config/traefik.toml
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8081
           volumeMounts:
             - mountPath: /config
               name: config
@@ -1435,7 +1435,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8081
             - name: status
               containerPort: 8888
           livenessProbe:
